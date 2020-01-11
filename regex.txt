@@ -1,0 +1,17 @@
+(?<=<).*?(?=>)
+
+(<([^;]*)>)
+
+anything between < and > , the top one seem work bit better (?)
+
+(?<=<).*?(jpeg">)
+all jpeg
+
+(Dice:).*
+any whole line starting with 'Dice:'
+
+
+
+///// not working
+
+(<img src([^;]*)(^jpeg$))
