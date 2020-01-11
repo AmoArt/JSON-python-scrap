@@ -12,6 +12,28 @@ any whole line starting with 'Dice:'
 
 
 
+
+/////list of removal
+
+<i>
+</i>
+
+<p>
+</p>
+
+(<br>Dice:).*
+
+(?<=<).*?(jpeg">)
+(?<=<).*?(png">)
+(?<=<).*?(gif">)
+
+# odd http and youtube liks by hand
+
+<br>
+</br>
+
+(<XYZ).*?(>) \\\test it with image stuff above?
+
 ///// not working
 
 (<img src([^;]*)(^jpeg$))
