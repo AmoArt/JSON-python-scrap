@@ -13,7 +13,7 @@ any whole line starting with 'Dice:'
 
 
 
-/////list of removal
+/////list of removal /////////////////////////////////
 
 <i>
 </i>
@@ -56,7 +56,7 @@ Searches for EMPTY line
 
 
 
-//////////other
+//////////other ///////////////////////////////////////
 
 ((9,\n).*?(\d))
 find between 9,NEW Line to NUMBER
@@ -73,11 +73,38 @@ select from \d,9,\n to first NUMBER
 (\d,9,\n\s+.*?\d)
 
 
-///// not working
+//////////////////////////////////////
+cleanerV2
+
+(<#p).*?(>)
+
+(<http://suptg).*
+
+(<javasc).*
+
+(File: ).*
+
+.*(JPG|PNG|GIF|PDF|WEBM)
+--deletes all lines ending with those files
+
+(\(\d).*?(\))
+
+(\d\d\/).*
+--remove all the date lines day/month/year
+
+(>>\d\d).*(\d)
+(\d\d\d\d\d).*(\d)
+--removes all the post numbers
+
+(http).*
+
+^[ \t]*$\r?\n
+--Delete all empty lines
+
+
+///// not working  //////////////////////////////////////////
 
 (<img src([^;]*)(^jpeg$))
-
-
 
 ^$[\r\n]+([^\r\n]+)
 selects everything that has a New line containing EMPTY
@@ -86,10 +113,8 @@ selects everything that has a New line containing EMPTY
 ^((?!(9,\n)).)*$
 Its selecting the exact line that has 9,NUMBER but cant get it work with anything else 
 
-
 9,[\r\n]+([^\r\n]+)
 selects single line under 9,
-
 
 \d,9,[\r\n]+([^\r\n]+)
 
