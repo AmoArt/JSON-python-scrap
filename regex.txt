@@ -102,6 +102,13 @@ cleanerV2
 --Delete all empty lines
 
 
+
+/////// Other //////////////////////////////////////////
+
+\.$
+-removes the dot at end of line
+
+
 ///// not working  //////////////////////////////////////////
 
 (<img src([^;]*)(^jpeg$))
