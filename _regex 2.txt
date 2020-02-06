@@ -1,0 +1,133 @@
+﻿
+(?<=<).*?(?=>)
+
+(<([^;]*)>)
+
+anything between < and > , the top one seem work bit better (?)
+
+(?<=<).*?(jpeg">)
+all jpeg
+
+(Dice:).*
+any whole line starting with 'Dice:'
+
+
+
+
+/////list of removal /////////////////////////////////
+
+<i>
+</i>
+
+<p>
+</p>
+
+(<br>Dice:).*
+
+(?<=<).*?(jpeg">)
+(?<=<).*?(png">)
+(?<=<).*?(gif">)
+
+# odd http and youtube liks by hand
+
+<br>
+</br>
+
+(<XYZ).*?(>) \\\test it with image stuff above?
+
+
+
+\r\n|\n|\r
+Remove all new lines into a single line
+
+
+(\d,\d,\d)(.*$)
+Find after  Number,Number,Number
+
+(\d,\d\d,\d\d,)
+Find anything with Number,Number,Number
+
+$1\n
+Add new line
+
+^\s*$
+Searches for EMPTY line
+
+
+
+
+
+//////////other ///////////////////////////////////////
+
+((9,\n).*?(\d))
+find between 9,NEW Line to NUMBER
+
+
+ordernr[\r\n]+([^\r\n]+)
+looks for sentence "ordernr" and selects whatever is under it 
+
+(\d,9,\n\s+.*?\d)
+select from \d,9,\n to first NUMBER
+
+
+\n^\s*$[\r\n]+([^\r\n]+)
+(\d,9,\n\s+.*?\d)
+
+
+//////////////////////////////////////
+cleanerV2
+
+(<#p).*?(>)
+
+(<http://suptg).*
+
+(<javasc).*
+
+(File: ).*
+
+.*(JPG|PNG|GIF|PDF|WEBM)
+--deletes all lines ending with those files
+
+(\(\d).*?(\))
+
+(\d\d\/).*
+--remove all the date lines day/month/year
+
+(>>\d\d).*(\d)
+(\d\d\d\d\d).*(\d)
+--removes all the post numbers
+
+(http).*
+
+^[ \t]*$\r?\n
+--Delete all empty lines
+
+
+
+/////// Other //////////////////////////////////////////
+
+\.$
+-removes the dot at end of line
+
+
+[\r\n]+ZXCV
+-finds any new lines that begings with string "ZXCV"
+
+
+///// not working  //////////////////////////////////////////
+
+(<img src([^;]*)(^jpeg$))
+
+^$[\r\n]+([^\r\n]+)
+selects everything that has a New line containing EMPTY
+
+
+^((?!(9,\n)).)*$
+Its selecting the exact line that has 9,NUMBER but cant get it work with anything else 
+
+9,[\r\n]+([^\r\n]+)
+selects single line under 9,
+
+\d,9,[\r\n]+([^\r\n]+)
+
+
