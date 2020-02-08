@@ -121,6 +121,10 @@ cleanerV2
 ^$[\r\n]+([^\r\n]+)
 selects everything that has a New line containing EMPTY
 
+((?:(\|).*?))(((\[).*?(\])))
+serch for file with element | and group it with ANY characters until you hit [
+Anything between [ and ] is its own group
+
 
 ^((?!(9,\n)).)*$
 Its selecting the exact line that has 9,NUMBER but cant get it work with anything else 
