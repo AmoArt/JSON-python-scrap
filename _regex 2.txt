@@ -113,6 +113,8 @@ cleanerV2
 [\r\n]+ZXCV
 -finds any new lines that begings with string "ZXCV"
 
+(\n.*?)( )
+group0 is new line until, group1 a empty SPACE between frist and second word
 
 ///// not working  //////////////////////////////////////////
 
