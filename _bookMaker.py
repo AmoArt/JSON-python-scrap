@@ -29,7 +29,7 @@ for f in all_dic:
 
         blankTXT += x
     
-    blankTXT += "\n"
+    blankTXT += "\n\n"
     
 
     f=open('outputBook.txt', 'w', encoding='utf-8')
