@@ -114,7 +114,10 @@ cleanerV2
 -finds any new lines that begings with string "ZXCV"
 
 (\n.*?)( )
-group0 is new line until, group1 a empty SPACE between frist and second word
+group0 is new line until, group1 a empty SPACE between first and second word
+
+^((?!XXX).)*?$
+looks for any line NOT containing XXX string.
 
 ///// not working  //////////////////////////////////////////
 
