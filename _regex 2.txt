@@ -123,6 +123,9 @@ group0 is new line until, group1 a empty SPACE between first and second word
 ^((?!XXX).)*?$
 looks for any line NOT containing XXX string.
 
+dir > listmyfolder.txt
+cmd code to make list of all files
+
 ///// not working  //////////////////////////////////////////
 
 (<img src([^;]*)(^jpeg$))
