@@ -126,6 +126,25 @@ looks for any line NOT containing XXX string.
 dir > listmyfolder.txt
 cmd code to make list of all files
 
+
+----how to sort notepad++ lines based on lenght
+
+turn on regex on replace. turn on the TextFX module
+
+1Find:^
+Replace:     
+^(here are 5 spaces but you will need as many spaces as the longest word/sentence in the file list)
+
+2Find:^ *(.....)$
+^need as many fullstops as spaces from the above 'Replace'
+Replace:\1
+^TextFX -> TextFX Tools -> Sort lines case insensitive. 
+
+3Find:^ +(.)
+Replace:\1
+----
+
+
 ///// not working  //////////////////////////////////////////
 
 (<img src([^;]*)(^jpeg$))
