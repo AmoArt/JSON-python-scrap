@@ -78,6 +78,10 @@ Using the CMD, got to the directory where you have a large number of text files,
 use the above code to copy and paste them int o new file 'output.txt'
 
 
+^\R
+^\h*\R
+Empty line removal
+
 //////////////////////////////////////
 cleanerV2
 
