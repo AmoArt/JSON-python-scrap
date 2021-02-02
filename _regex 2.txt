@@ -167,6 +167,28 @@ wavs\/
 $
 \;
 
+---removing wav with duplication and missing lines
+
+\R^.*(.wav$)\R^.*?$
+
+
+\R        -select from the ending of the line above
+^.*       -select everyting from the start of the 1st line to next command
+(.wav$)   -select a text line containing 'wav' with the line ending
+\R        -go line under
+^.*?      -select everything on 2nd line...
+$         -all the way o the ending of 2nd line
+
+e.g. 
+
+goodBye.wav|Good Bye;(* starts here)
+helloWorld.wav
+helloWorld.wav|Hello World.;(* ends here)
+
+---
+
+
+
 ----
 ///// not working  //////////////////////////////////////////
 
