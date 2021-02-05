@@ -187,9 +187,14 @@ helloWorld.wav|Hello World.;(* ends here)
 
 ---
 
-
+-Select everyline that has " | " symbol but do not contain the "k or K" afterwards.
+^(?!.*(\|.*?(k|K))).*$
 
 ----
+
+
+
+---
 ///// not working  //////////////////////////////////////////
 
 (<img src([^;]*)(^jpeg$))
