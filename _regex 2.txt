@@ -192,6 +192,40 @@ helloWorld.wav|Hello World.;(* ends here)
 
 ----
 
+-select the word the, but do not selsect any words containt the (like THEater)
+
+((?<!(\w))|(?=(\s)))(the)((?!\w)|(?=(\s)))
+
+
+
+((?<!(\w))
+selects eleents as long as its NOT contains a letter in front of itself
+
+|
+OR
+
+(?=(\s)))
+it HAS space/tab line\breakline infron of itself (BUT do notactually grabs it in selectin)
+
+(the)
+exact word 'the'
+
+((?!\w)
+is NOT followed by anny character
+
+|
+OR
+
+(?=(\s)))
+it HAS space/tab line\breakline after itself (BUT do notactually grabs it in selectin)
+
+
+e.g.
+
+"The new theather named after the king"
+it will only select the last 'the' since its witten in lowcaps
+
+----
 
 
 ---
