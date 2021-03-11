@@ -227,6 +227,15 @@ it will only select the last 'the' since its witten in lowcaps
 
 ----
 
+-Select NOT king
+
+^((?!king).)*$
+
+----
+
+
+----
+
 
 ---
 ///// not working  //////////////////////////////////////////
